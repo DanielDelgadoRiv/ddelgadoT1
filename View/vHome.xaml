@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ddelgadoT1.View.vHome"
+             Title="vHome">
+    <VerticalStackLayout>
+        <!-- ENCABEZADO -->
+        <Label Text="FASE A - GRADO"
+               FontSize="40"
+               FontAttributes="Bold"
+               TextColor="DarkBlue"
+               HorizontalTextAlignment="Center"/>
+
+        <Label Text="Formulario de registro"
+               FontSize="24"
+               TextColor="DarkBlue"
+               HorizontalTextAlignment="Center"
+               Margin="0,8,0,3"/>
+
+        <Label Text="Complete la siguiente información para realizar su inscripción."
+               FontSize="23"
+               TextColor="DarkBlue"
+               HorizontalTextAlignment="Center"/>
+
+        <Label Text="Datos Personales"
+               FontSize="23"
+               TextColor="Gray"
+               Margin="0,10,0,2"/>
+
+        <!-- IDENTIFICACION -->
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+
+            <Label Text="Identificación:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Picker x:Name="cmbIdentificacion"
+                   Grid.Column="1"
+                   Title="Seleccione..."
+                   FontSize="22"
+                   SelectedIndex="0">
+                <Picker.Items>
+                    <x:String>CÉDULA</x:String>
+                    <x:String>PASAPORTE</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+            
+            <Label Text="Número documento:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNumero"
+                   Grid.Column="1"
+                   FontSize="22" />
+        </Grid>
+
+        <!-- APELLIDOS -->
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+            
+            <Label Text="Apellido paterno:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtApellidoPaterno"
+                   Grid.Column="1"
+                   FontSize="22"
+                   Keyboard="Text"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+
+            <Label Text="Apellido materno:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtApellidoMaterno"
+                   Grid.Column="1"
+                   FontSize="22"
+                   Keyboard="Text"/>
+        </Grid>
+
+        <!-- NOMBRES -->
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+
+            <Label Text="Nombres completos:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNombres"
+                   Grid.Column="1"
+                   FontSize="22"
+                   Keyboard="Text"/>
+        </Grid>
+
+        <!-- TELEFONO -->
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+
+            <Label Text="Teléfono personal:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtTelefono"
+                   Grid.Column="1"
+                   FontSize="22"
+                   Keyboard="Telephone"/>
+        </Grid>
+
+        <!-- CORREO -->
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+
+            <Label Text="Correo personal:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtCorreo"
+                   Grid.Column="1"
+                   FontSize="22"
+                   Keyboard="Email"/>
+        </Grid>
+
+        <!-- CONFIRMAR CORREO -->
+        <Grid ColumnDefinitions="220,475"
+              ColumnSpacing="10">
+
+            <Label Text="Confirmar correo:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtConfirmarCorreo"
+                   Grid.Column="1"
+                   FontSize="22"
+                   Keyboard="Email"/>
+        </Grid>
+
+        <!-- CARRERA -->
+        <Grid ColumnDefinitions="150,*"
+              ColumnSpacing="25">
+
+            <Label Text="Carrera:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Picker x:Name="cmbCarrera"
+                   Grid.Column="1"
+                   Title="Seleccione..."
+                   FontSize="22"
+                   HorizontalTextAlignment="Center">
+                <Picker.Items>
+                    <x:String>ADMINISTRACIÓN DE EMPRESAS</x:String>
+                    <x:String>CONTABILIDAD Y AUDITORÍA</x:String>
+                    <x:String>DISEÑO DIGITAL</x:String>
+                    <x:String>EDUCACIÓN BÁSICA</x:String>
+                    <x:String>EDUCACIÓN INICIAL</x:String>
+                    <x:String>ELECTRÓNICA Y AUTOMATIZACIÓN</x:String>
+                    <x:String>INFORMÁTICA</x:String>
+                    <x:String>MEDICINA</x:String>
+                    <x:String>PSICOLOGÍA</x:String>
+                    <x:String>SISTEMAS DE INFORMACIÓN</x:String>
+                    <x:String>TELECOMUNICACIONES</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+
+        <!-- MODALIDAD -->
+        <Grid ColumnDefinitions="150,*"
+              ColumnSpacing="10">
+
+            <Label Text="Modalidad:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Picker x:Name="cmbModalidad"
+                   Grid.Column="1"
+                   Title="Seleccione..."
+                   FontSize="22"
+                   HorizontalTextAlignment="Center">
+                <Picker.Items>
+                    <x:String>PRESENCIAL</x:String>
+                    <x:String>SEMIPRESENCIAL</x:String>
+                    <x:String>EN LÍNEA</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+
+        <!-- CAMPUS -->
+        <Grid ColumnDefinitions="150,*"
+              ColumnSpacing="25">
+
+            <Label Text="Campus:"
+                   FontSize="23"
+                   VerticalTextAlignment="Center"/>
+
+            <Picker x:Name="cmbCampus"
+                   Grid.Column="1"
+                   Title="Seleccione..."
+                   FontSize="22"
+                   HorizontalTextAlignment="Center">
+                <Picker.Items>
+                    <x:String>Campus Matriz - Francisco Pizarro E4-142 y Marieta de Veintimilla</x:String>
+                    <x:String>Campus Norte - Calle Antonio costas N52-408 y Cesar Villacres</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+
+        <!--Objeto boton-->
+        <!-- BOTON GUARDAR -->
+        <Button x:Name="btnGuardar"
+                Text="Enviar Inscripción"
+                FontSize="16"
+                TextColor="Gray"
+                BackgroundColor="White"
+                BorderColor="Gray"
+                BorderWidth="1"
+                CornerRadius="0"
+                HeightRequest="45"
+                HorizontalOptions="FillAndExpand"
+                Margin="0,10,0,0"
+                Clicked="btnGuardar_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
